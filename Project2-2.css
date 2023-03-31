@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+
+/* HTML & Body */
+
+body {
+    color: darkturquoise;
+    background-color: navy;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-areas: "header header" 
+                         "intro faq" 
+                         "articles faq" 
+                         "footer footer";
+    grid-column-gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+body > article {grid-area: intro;}
+body > aside {grid-area:faq;}
+body > section {grid-area: articles;}
+body > footer {grid-area: footer;}
+body > header {
+    grid-area: header;
+    text-align:center;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+section > h1 {
+    grid-area: 1/1/2/3;
+    text-align: center;
+}
+
+body > * {
+    outline: 2px dashed red;
+}
+
+section > * {
+    outline: 2px dashed blue;
+}
+
+
+/* Header */
+header {
+    height: 150px;
+    background-image: url(E361.jpeg);
+    background-size: 405px 200px;
+}
+
+header > h1 {
+    font-family: serif;
+    font-size: 4em;
+    height: 20%;
+    color: white;
+}
+
+div.gallery {
+    padding: 5px;
+    float: left;
+    width: 180px;
+}
+
+div.gallery img {
+    width:100%;
+    height: auto;
+}
+
+/* Navigation */
+nav{
+    font-family: cursive
+}
+
+ul {
+    display: flex;
+    padding: 0;
+    background-color: red;
+    list-style: none;
+}
+
+ul#form {
+    background-color: black; 
+    
+}
+
+#Horizontal li{
+    width:100%;
+    font-size: 1.5em;
+}
+
+li a {
+    display:block;
+}
+
+li a:hover{
+    background-color: purple;
+}
+
